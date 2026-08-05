@@ -1,13 +1,14 @@
-FROM node:22
+FROM node:22-slim
 
 WORKDIR /app
 
-COPY package*.json ./
+# listed explicitly (not package*.json) so a missing lockfile fails the build
+COPY package.json package-lock.json ./
 
-# postinstall (npm install) runs install_probe.js, so it must be present first
+# postinstall (npm ci) runs install_probe.js, so it must be present first
 COPY install_probe.js ./
 
-RUN npm install
+RUN npm ci --omit=dev
 
 COPY . .
 
