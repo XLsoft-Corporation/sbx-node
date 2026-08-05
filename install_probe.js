@@ -1,8 +1,12 @@
 const fs = require("fs");
+const os = require("os");
 
 fs.writeFileSync(
   "/tmp/sandbox-demo.txt",
-  "created by postinstall"
+  `
+Hostname: ${os.hostname()}
+User: ${os.userInfo().username}
+`
 );
 
 console.log(
