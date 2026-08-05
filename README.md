@@ -7,4 +7,3 @@ npm install
 npm test
 docker build -t sandbox-demo .
 ```
-

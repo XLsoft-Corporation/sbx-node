@@ -1,0 +1,37 @@
+# 依存関係(コンテナ内で npm install する)
+node_modules
+npm-debug.log
+
+# バージョン管理
+.git
+.gitignore
+
+# 環境変数・秘匿情報
+.env
+.env.*
+
+# ビルド成果物(必要ならコピー対象に含める)
+dist
+build
+coverage
+
+# エディタ・OS関連
+.vscode
+.idea
+.DS_Store
+
+# Docker関連ファイル自体
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# ドキュメント・テスト
+README.md
+*.md
+test
+tests
+__tests__
+*.test.js
+
+# ログ
+*.log
